@@ -11,7 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="gate-active">
+    <div class="gate" id="gate">
+      <div class="gate-letter">
+        <p class="gate-eyebrow" data-i18n="gateEyebrow">For family &amp; friends</p>
+        <p class="gate-names">Maxilus <span>&amp;</span> Shevone</p>
+        <button class="wax-seal" id="wax-seal" type="button" aria-label="Open the invitation">
+          <span class="wax-seal-inner">M<span>×</span>S</span>
+        </button>
+        <p class="gate-hint" data-i18n="gateHint">tap the seal to begin</p>
+      </div>
+    </div>
+
+    <audio id="bg-music" preload="none"></audio>
+    <div class="vinyl-player" id="vinyl-player">
+      <button class="vinyl-disc" id="vinyl-disc" type="button" aria-label="Play our music" aria-pressed="false">
+        <span class="vinyl-label">M<span>×</span>S</span>
+      </button>
+      <div class="vinyl-info">
+        <p class="vinyl-track" id="vinyl-track">♪ 不知不觉</p>
+        <p class="vinyl-hint" data-i18n="vinylHint">drag to change track</p>
+      </div>
+    </div>
+
     <header class="hero" id="top">
       <nav class="nav" aria-label="Main navigation">
         <a class="monogram" href="#top" aria-label="Home">M <span>×</span> S</a>
@@ -27,28 +49,56 @@
       </div>
       <div class="hero-flower flower-left" aria-hidden="true">✽</div>
       <div class="hero-flower flower-right" aria-hidden="true">✽</div>
+      <div class="petals" aria-hidden="true"><span>♪</span><span>♫</span><span>♩</span><span>♬</span><span>♪</span></div>
     </header>
 
+    <section class="countdown reveal" aria-label="Countdown to the wedding">
+      <div class="countdown-grid">
+        <div><span class="countdown-num" id="cd-days">00</span><span class="countdown-label" data-i18n="cdDays">Days</span></div>
+        <div><span class="countdown-num" id="cd-hours">00</span><span class="countdown-label" data-i18n="cdHours">Hours</span></div>
+        <div><span class="countdown-num" id="cd-mins">00</span><span class="countdown-label" data-i18n="cdMins">Minutes</span></div>
+        <div><span class="countdown-num" id="cd-secs">00</span><span class="countdown-label" data-i18n="cdSecs">Seconds</span></div>
+      </div>
+      <p class="countdown-note" data-i18n="cdNote">until we say "I do"</p>
+    </section>
+
     <main>
-      <section class="intro section">
-        <p class="eyebrow plum" data-i18n="introEyebrow">Where our next melody begins</p>
-        <h2 data-i18n-html="introTitle">One beautiful evening,<br />made warmer with you.</h2>
-        <p class="intro-copy" data-i18n="introCopy">We’re getting married — and it simply wouldn’t feel complete without the people who have cheered us on along the way.</p>
+      <section class="intro-grid section reveal">
+        <div class="intro-text">
+          <p class="eyebrow plum" data-i18n="introEyebrow">Where our next melody begins</p>
+          <h2 data-i18n-html="introTitle">One beautiful evening,<br />made warmer with you.</h2>
+          <p class="intro-copy" data-i18n="introCopy">We’re getting married — and it simply wouldn’t feel complete without the people who have cheered us on along the way.</p>
+        </div>
+        <figure class="scrapbook-photo tilt-left">
+          <img src="warm-portrait.jpg" alt="Maxilus and Shevone sharing a warm, candid moment" />
+          <figcaption data-i18n="capWarm">just us, being us</figcaption>
+        </figure>
       </section>
 
-      <section class="details section" aria-labelledby="details-heading">
+      <div class="divider reveal" aria-hidden="true"><span>♪</span><span>♥</span><span>♪</span></div>
+
+      <section class="details section reveal" aria-labelledby="details-heading">
         <p class="eyebrow plum" data-i18n="detailsEyebrow">A little note for you</p>
         <h2 id="details-heading" data-i18n="detailsTitle">Save the date</h2>
         <div class="detail-grid">
           <article>
+            <span class="detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="3" y1="9.5" x2="21" y2="9.5"/></svg>
+            </span>
             <p class="detail-label" data-i18n="whenLabel">When</p>
             <p data-i18n-html="whenCopy">Saturday<br /><strong>19 September 2026</strong></p>
           </article>
           <article>
+            <span class="detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14.5"/></svg>
+            </span>
             <p class="detail-label" data-i18n="scheduleLabel">A little schedule</p>
             <p data-i18n-html="scheduleCopy"><strong>5:00 PM</strong> · Tea ceremony<br /><strong>7:00 PM</strong> · Wedding celebration</p>
           </article>
           <article>
+            <span class="detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7.58-7-12a7 7 0 1 1 14 0c0 4.42-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
             <p class="detail-label" data-i18n="whereLabel">Where</p>
             <p data-i18n-html="whereCopy"><strong>Golden Sun Restaurant</strong><br /><span class="chinese-name">金阳迎宾楼</span><br />Kuchai Lama</p>
           </article>
@@ -60,32 +110,37 @@
         </div>
       </section>
 
-      <section class="poster-section" aria-label="Save the date poster">
+      <figure class="scrapbook-photo tilt-right breather reveal">
+        <img src="formal-portrait.jpg" alt="Maxilus and Shevone in formal wedding attire" />
+        <figcaption data-i18n="capFormal">dressed up, just for you</figcaption>
+      </figure>
+
+      <section class="poster-section reveal" aria-label="Save the date poster">
         <div class="poster-copy">
           <p class="eyebrow plum" data-i18n="posterEyebrow">Our save the date</p>
           <h2 data-i18n="posterTitle">A journey worth celebrating.</h2>
           <p data-i18n="posterCopy">From snowy Hokkaido memories to an evening in Kuchai Lama, we’re so happy to have you in the story of our next chapter.</p>
           <p class="poster-note" data-i18n="posterNote">♫ Bring your best celebration energy.</p>
         </div>
-        <figure class="poster-frame">
-          <img src="save-the-date-poster.jpeg" alt="Save the date poster for Maxilus and Shevone" />
-        </figure>
-      </section>
-
-      <section class="gallery-section" aria-labelledby="gallery-heading">
-        <div class="gallery-heading">
-          <p class="eyebrow plum" data-i18n="galleryEyebrow">A few of our favourite moments</p>
-          <h2 id="gallery-heading" data-i18n="galleryTitle">Our story in frames</h2>
-        </div>
-        <div class="gallery-grid">
-          <figure class="gallery-photo warm"><img src="warm-portrait.jpg" alt="Maxilus and Shevone sharing a warm, candid moment" /></figure>
-          <figure class="gallery-photo red"><img src="traditional-portrait.jpg" alt="Maxilus and Shevone in traditional red wedding attire" /></figure>
-          <figure class="gallery-photo formal"><img src="formal-portrait.jpg" alt="Maxilus and Shevone in formal wedding attire" /></figure>
-          <figure class="gallery-photo lake"><img src="lakeside-portrait.jpg" alt="Maxilus and Shevone walking by a lakeside" /></figure>
+        <div class="poster-stack">
+          <figure class="poster-frame">
+            <img src="save-the-date-poster.jpeg" alt="Save the date poster for Maxilus and Shevone" />
+          </figure>
+          <figure class="scrapbook-photo tilt-left accent-photo">
+            <img src="traditional-portrait.jpg" alt="Maxilus and Shevone in traditional red wedding attire" />
+            <figcaption data-i18n="capRed">double happiness</figcaption>
+          </figure>
         </div>
       </section>
 
-      <section class="rsvp section" id="rsvp" aria-labelledby="rsvp-heading">
+      <figure class="scrapbook-photo tilt-left breather reveal">
+        <img src="lakeside-portrait.jpg" alt="Maxilus and Shevone walking by a lakeside" />
+        <figcaption data-i18n="capLake">can’t wait to celebrate with you</figcaption>
+      </figure>
+
+      <div class="divider reveal" aria-hidden="true"><span>♪</span><span>♥</span><span>♪</span></div>
+
+      <section class="rsvp section reveal" id="rsvp" aria-labelledby="rsvp-heading">
         <p class="eyebrow plum" data-i18n="rsvpDeadline">Please respond by 31 August 2026</p>
         <h2 id="rsvp-heading" data-i18n="rsvpTitle">Will you join us?</h2>
         <p class="rsvp-lead" data-i18n="rsvpLead">We would love to share this happy day with you.</p>
@@ -106,7 +161,7 @@
     </main>
 
     <footer>
-      <p>Maxilus <span>×</span> Shevone</p>
+      <p><span aria-hidden="true">♪</span> Maxilus <span>×</span> Shevone <span aria-hidden="true">♪</span></p>
       <a href="#top" data-i18n="backTop">Back to top ↑</a>
     </footer>
     <script src="script.js"></script>
