@@ -101,6 +101,7 @@ let dragStartX = 0;
 function loadTrack(index, autoplay) {
   currentTrack = ((index % TRACKS.length) + TRACKS.length) % TRACKS.length;
   musicAudio.src = TRACKS[currentTrack].src;
+  musicAudio.load();
   vinylTrackLabel.textContent = TRACKS[currentTrack].title;
   if (autoplay) setPlaying(true);
 }

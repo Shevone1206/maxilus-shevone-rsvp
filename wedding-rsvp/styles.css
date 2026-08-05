@@ -43,7 +43,7 @@ body.gate-active { overflow:hidden; }
 .gate-letter:after { top:66%; }
 .gate-eyebrow { text-transform:uppercase; letter-spacing:.2em; font-size:12px; color:var(--wine); font-weight:600; margin-bottom:16px; }
 .gate-names { font-family:"Playfair Display",serif; font-size:28px; color:var(--plum); margin-bottom:30px; }.gate-names span{color:var(--gold)}
-.wax-seal { width:96px; height:96px; border:none; cursor:pointer; background:radial-gradient(circle at 32% 28%, #d9a545, #a8752a 60%, #7a5218 100%); border-radius:50%; position:relative; transition:transform .25s ease; box-shadow:0 10px 16px rgba(74,23,26,.4); }
+.wax-seal { width:96px; height:96px; border:none; cursor:pointer; background-color:transparent; background-image:url("https://www.dropbox.com/scl/fi/q5ujlmu1tqa0rhpadjrgj/wax-seal.png?rlkey=2gbfzp74cualal218lgai9868&st=4l0ltm6u&dl=1"); background-size:contain; background-repeat:no-repeat; background-position:center; position:relative; transition:transform .25s ease; filter:drop-shadow(0 10px 16px rgba(74,23,26,.4)); }
 .wax-seal:hover { transform:scale(1.06) rotate(-3deg); }
 .gate-hint { margin-top:16px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8a7256; }
 @keyframes sealCrack { 0% { transform:scale(1); } 40% { transform:scale(.85) rotate(-8deg); } 100% { transform:scale(0) rotate(20deg); opacity:0; } }
