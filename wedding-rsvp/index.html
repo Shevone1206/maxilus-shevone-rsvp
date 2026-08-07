@@ -16,19 +16,18 @@
       <div class="gate-letter">
         <p class="gate-eyebrow" data-i18n="gateEyebrow">For family &amp; friends</p>
         <p class="gate-names">Maxilus <span>&amp;</span> Shevone</p>
-        <button class="wax-seal" id="wax-seal" type="button" aria-label="Open the invitation"></button>
+        <button class="wax-seal" id="wax-seal" type="button" aria-label="Open the invitation"><span class="wax-seal-emboss">M<em>&amp;</em>S</span></button>
         <p class="gate-hint" data-i18n="gateHint">tap the seal to begin</p>
       </div>
     </div>
 
-    <audio id="bg-music" preload="none"></audio>
+    <audio id="bg-music" preload="none" loop></audio>
     <div class="vinyl-player" id="vinyl-player">
       <button class="vinyl-disc" id="vinyl-disc" type="button" aria-label="Play our music" aria-pressed="false">
         <span class="vinyl-label">M<span>×</span>S</span>
       </button>
       <div class="vinyl-info">
         <p class="vinyl-track" id="vinyl-track">♪ Our Song</p>
-        <p class="vinyl-hint" data-i18n="vinylHint">drag to change track</p>
       </div>
     </div>
 
@@ -153,7 +152,7 @@
             <label class="choice"><input type="radio" name="attendance" value="Joyfully accepts" required /><span data-i18n="accepts">Joyfully accepts</span></label>
             <label class="choice"><input type="radio" name="attendance" value="Regretfully declines" required /><span data-i18n="declines">Regretfully declines</span></label>
           </div>
-          <label class="field"><span data-i18n="nameLabel">Your name</span><input name="primaryName" type="text" autocomplete="name" placeholder="Full name" data-i18n-placeholder="namePlaceholder" required /></label>
+          <label class="field"><span data-i18n="nameLabel">Name</span><input name="primaryName" type="text" autocomplete="name" placeholder="Name" data-i18n-placeholder="namePlaceholder" required /></label>
           <label class="field"><span data-i18n="guestLabel">Guest name(s)</span><input name="guestNames" type="text" placeholder="Names of accompanying guests, if any" data-i18n-placeholder="guestPlaceholder" /></label>
           <label class="field"><span data-i18n="paxLabel">Number of guests</span><select name="pax" required><option value="" selected disabled data-i18n="paxPlaceholder">Select number</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5+">5+</option></select></label>
           <label class="field"><span data-i18n="allergyLabel">Food allergies or dietary requirements</span><textarea name="allergies" rows="3" placeholder="Please let us know, or write “None”." data-i18n-placeholder="allergyPlaceholder"></textarea></label>
