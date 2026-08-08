@@ -23,7 +23,7 @@ const translations = {
     capWarm:"就是我们，最自然的样子",capFormal:"为你精心打扮的这一刻",capRed:"双喜临门",capLake:"等不及要和你一起庆祝",leadFormal:"就这样，我们准备好了",leadLake:"每一天，都离你更近一点",
     detailsEyebrow:"给你的一封小邀请",detailsTitle:"请记下这个日子",whenLabel:"日期",whenCopy:"星期六<br /><strong>2026年9月19日</strong>",scheduleLabel:"当天安排",scheduleCopy:"<strong>5:00 PM</strong> · 敬茶仪式<br /><strong>7:00 PM</strong> · 婚宴庆祝",whereLabel:"地点",whereCopy:"<strong>金阳迎宾楼</strong><br /><span class=\"chinese-name\">Golden Sun Restaurant</span><br />Kuchai Lama",teaNote:"<span>家人及亲戚</span> 敬请于 <strong>5:00 PM</strong> 前抵达，参与敬茶仪式。",calendarGoogle:"添加到 Google 日历",calendarApple:"添加到日历 (Apple/Outlook)",
     posterEyebrow:"我们的 Save the Date",posterTitle:"值得好好庆祝的旅程。",posterCopy:"从北海道的雪景回忆，到古仔路的这一晚，很开心在我们人生的下一章里有你们同行。",posterNote:"♫ 带上好心情，一起来庆祝吧。",
-    rsvpDeadline:"请于 2026年8月31日 前回复",rsvpTitle:"你会来吗？",rsvpLead:"我们很期待在这幸福的一天和你相聚。",attendanceLabel:"是否出席",accepts:"欣然出席",declines:"抱歉无法出席",nameLabel:"姓名",namePlaceholder:"姓名",guestLabel:"同行宾客姓名",guestPlaceholder:"如有同行宾客，请填写姓名",paxLabel:"出席人数",paxPlaceholder:"请选择人数",allergyLabel:"食物过敏或饮食需求",allergyPlaceholder:"如没有，请填写“无”。",submit:"提交回覆",backTop:"回到顶部 ↑",thanksEyebrow:"谢谢你",thanksTitle:"我们已收到你的回覆。",thanksCopy:"很开心收到你的消息，期待当天与您相见。",sending:"提交中…",error:"出了点问题，请稍后再试。"
+    rsvpDeadline:"请于 2026年8月23日 前回复",rsvpTitle:"你会来吗？",rsvpLead:"我们很期待在这幸福的一天和你相聚。",attendanceLabel:"是否出席",accepts:"欣然出席",declines:"抱歉无法出席",nameLabel:"姓名",namePlaceholder:"姓名",guestLabel:"同行宾客姓名",guestPlaceholder:"如有同行宾客，请填写姓名",paxLabel:"出席人数",paxPlaceholder:"请选择人数",allergyLabel:"食物过敏或饮食需求",allergyPlaceholder:"如没有，请填写“无”。",submit:"提交回覆",backTop:"回到顶部 ↑",thanksEyebrow:"谢谢你",thanksTitle:"我们已收到你的回覆。",thanksCopy:"很开心收到你的消息，期待当天与您相见。",sending:"提交中…",error:"出了点问题，请稍后再试。"
   },
   en: {}
 };
